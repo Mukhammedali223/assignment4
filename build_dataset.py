@@ -1,24 +1,3 @@
-"""
-Builds the frozen test set for Assignment 4.
-
-  own       our recency questions, collected automatically from PyPI right now:
-            recent_24h  - latest stable release uploaded less than 20 hours ago
-            older_2_7d  - latest stable release uploaded 50-160 hours ago
-            (margins keep every question inside its window during the run:
-             <24 h and 48-168 h at the moment the question is asked)
-            Ground truth = that version number, taken from the official PyPI JSON API.
-            Every older package is matched to a recent package with the closest
-            popularity rank, so both groups are equally well known.
-  freshqa   140 FreshQA questions (70 never-changing + 70 slow-changing, TEST and DEV
-            splits; after removing the A3 questions TEST alone has too few)
-  simpleqa  140 SimpleQA questions
-  Questions used in Assignment 3 (development data) are excluded.
-
-Output: questions_final.csv + dataset_info.json (counts and SHA-256 hash of the csv).
-
-Run:
-  python build_dataset.py
-"""
 import concurrent.futures
 import csv
 import hashlib
