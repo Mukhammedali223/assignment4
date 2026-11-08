@@ -1,24 +1,3 @@
-"""
-Builds every table, statistic and figure of the Assignment 4 report from ONE results file.
-Every number in the report can be found in the files this script writes.
-
-  main_table.csv     accuracy per dataset x group x condition:
-                     mean +/- SD over the 3 repeats (strict, normalized = PRIMARY, F1)
-                     and 95% bootstrap CI over questions
-  stats.csv          H1 (Fisher exact test) and paired condition comparisons
-                     (McNemar exact test) with Holm correction, differences and effect sizes
-  efficiency.csv     latency (median, IQR, p95), tokens and cost per answer per condition
-  error_cases.csv    every question RAG got wrong, for manual error categorisation
-  fig_accuracy.png   accuracy by dataset and condition with 95% CI
-  fig_recency.png    own questions: accuracy <24 h vs 2-7 days per condition
-  fig_latency.png    latency distribution per condition
-  analysis_output.txt  everything printed on screen
-
-Question-level result = correct in at least 2 of the 3 repeats (majority vote).
-
-Run:
-  python analyze.py results/results_<run_id>.csv
-"""
 import csv
 import os
 import random
