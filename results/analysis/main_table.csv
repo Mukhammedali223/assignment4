@@ -1,0 +1,16 @@
+﻿dataset,group,condition,n_questions,strict_mean,strict_sd,norm_mean,norm_sd,f1_mean,f1_sd,question_level_acc,ci95_low,ci95_high
+own,recent_24h,baseline,34,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+own,recent_24h,rag,34,0.088,0.0,0.088,0.0,0.088,0.0,0.088,0.0,0.206
+own,recent_24h,freshprompt,34,0.118,0.0,0.118,0.0,0.118,0.0,0.118,0.029,0.235
+own,older_2_7d,baseline,34,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+own,older_2_7d,rag,34,0.353,0.0,0.353,0.0,0.353,0.0,0.353,0.206,0.5
+own,older_2_7d,freshprompt,34,0.353,0.0,0.353,0.0,0.353,0.0,0.353,0.206,0.529
+freshqa,never-changing,baseline,70,0.69,0.016,0.69,0.016,0.71,0.008,0.7,0.586,0.8
+freshqa,never-changing,rag,70,0.814,0.0,0.829,0.0,0.857,0.0,0.829,0.743,0.914
+freshqa,never-changing,freshprompt,70,0.814,0.0,0.829,0.0,0.843,0.0,0.829,0.743,0.914
+freshqa,slow-changing,baseline,70,0.61,0.008,0.624,0.008,0.514,0.0,0.629,0.514,0.743
+freshqa,slow-changing,rag,70,0.657,0.0,0.7,0.0,0.771,0.0,0.7,0.586,0.8
+freshqa,slow-changing,freshprompt,70,0.652,0.008,0.695,0.008,0.767,0.008,0.7,0.586,0.8
+simpleqa,static,baseline,140,0.24,0.011,0.248,0.011,0.29,0.004,0.243,0.171,0.314
+simpleqa,static,rag,140,0.643,0.0,0.75,0.0,0.879,0.0,0.75,0.679,0.821
+simpleqa,static,freshprompt,140,0.667,0.004,0.779,0.0,0.886,0.0,0.786,0.714,0.85

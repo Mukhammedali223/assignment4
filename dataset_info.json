@@ -1,0 +1,14 @@
+{
+  "file": "questions_final.csv",
+  "built_at_astana": "2026-11-08 18:21",
+  "total": 348,
+  "counts": {
+    "own/recent_24h": 34,
+    "own/older_2_7d": 34,
+    "freshqa/never-changing": 70,
+    "freshqa/slow-changing": 70,
+    "simpleqa/static": 140
+  },
+  "sha256": "a350e2370d7385d32f62f6496fb1b57883122760e410fdc80fb0ffecbe432329",
+  "seed": 2026
+}

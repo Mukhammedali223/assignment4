@@ -1,0 +1,7 @@
+﻿dataset,group,questions,hits,hit_rate,rag_correct_given_hit,rag_acc_given_hit
+own,recent_24h,34,5,0.147,3,0.6
+own,older_2_7d,34,13,0.382,12,0.923
+freshqa,never-changing,70,61,0.871,54,0.885
+freshqa,slow-changing,70,61,0.871,48,0.787
+simpleqa,static,140,122,0.871,103,0.844
+own,"recent vs older (exploratory Fisher, one-sided)",,,odds ratio 0.279,,p=0.0263

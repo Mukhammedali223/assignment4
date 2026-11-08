@@ -1,0 +1,39 @@
+RAG questions answered wrongly: 121; manually labelled: 121
+
+ERROR TYPES (standard RAG, question level)
+Stale evidence                         32   26.4%
+Missing evidence (abstention)          26   21.5%
+Evidence ignored                        2    1.7%
+Misreading of question or context      12    9.9%
+Unreliable source                       3    2.5%
+Wrong entity                            1    0.8%
+Outdated reference label               10    8.3%
+Disputed reference label                6    5.0%
+Scorer false negative                  29   24.0%
+
+ERROR TYPES PER SUBSET
+own       recent_24h      errors  31  Stale evidence: 19, Missing evidence (abstention): 9, Evidence ignored: 1, Misreading of question or context: 1, Wrong entity: 1
+own       older_2_7d      errors  22  Stale evidence: 12, Missing evidence (abstention): 9, Misreading of question or context: 1
+freshqa   never-changing  errors  12  Disputed reference label: 4, Scorer false negative: 3, Stale evidence: 1, Unreliable source: 1, Evidence ignored: 1, Missing evidence (abstention): 1, Misreading of question or context: 1
+freshqa   slow-changing   errors  21  Outdated reference label: 10, Scorer false negative: 5, Misreading of question or context: 3, Missing evidence (abstention): 2, Disputed reference label: 1
+simpleqa  static          errors  35  Scorer false negative: 21, Misreading of question or context: 6, Missing evidence (abstention): 5, Unreliable source: 2, Disputed reference label: 1
+
+RETRIEVAL HIT RATE (ground truth in retrieved text) AND RAG ACCURACY GIVEN A HIT
+own       recent_24h      hit   5/ 34 = 0.147   correct given hit 3/5
+own       older_2_7d      hit  13/ 34 = 0.382   correct given hit 12/13
+freshqa   never-changing  hit  61/ 70 = 0.871   correct given hit 54/61
+freshqa   slow-changing   hit  61/ 70 = 0.871   correct given hit 48/61
+simpleqa  static          hit 122/140 = 0.871   correct given hit 103/122
+Exploratory: hit rate recent vs older, Fisher one-sided p=0.0263, odds ratio 0.279
+
+SENSITIVITY 1: FreshQA slow-changing with outdated labels excluded (labels never edited)
+baseline    all labels 44/70 = 0.629   without 10 outdated 40/60 = 0.667
+rag         all labels 49/70 = 0.700   without 10 outdated 49/60 = 0.817
+freshprompt all labels 49/70 = 0.700   without 10 outdated 48/60 = 0.800
+
+SENSITIVITY 2: standard RAG if scorer false negatives were counted as correct
+own       recent_24h      automatic 3/34 = 0.088   with 0 false negatives 3/34 = 0.088
+own       older_2_7d      automatic 12/34 = 0.353   with 0 false negatives 12/34 = 0.353
+freshqa   never-changing  automatic 58/70 = 0.829   with 3 false negatives 61/70 = 0.871
+freshqa   slow-changing   automatic 49/70 = 0.700   with 5 false negatives 54/70 = 0.771
+simpleqa  static          automatic 105/140 = 0.750   with 21 false negatives 126/140 = 0.900

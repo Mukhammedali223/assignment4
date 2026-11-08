@@ -1,0 +1,39 @@
+Results file: results/results_20261108_133215.csv
+Answers: 3132; questions: 348
+Questions outside their time window: none
+
+MAIN TABLE (mean +/- SD over repeats; question-level accuracy with 95% CI)
+own       recent_24h      baseline    n= 34  norm 0.000+/-0.000  strict 0.000  f1 0.000  q-level 0.000 [0.000, 0.000]
+own       recent_24h      rag         n= 34  norm 0.088+/-0.000  strict 0.088  f1 0.088  q-level 0.088 [0.000, 0.206]
+own       recent_24h      freshprompt n= 34  norm 0.118+/-0.000  strict 0.118  f1 0.118  q-level 0.118 [0.029, 0.235]
+own       older_2_7d      baseline    n= 34  norm 0.000+/-0.000  strict 0.000  f1 0.000  q-level 0.000 [0.000, 0.000]
+own       older_2_7d      rag         n= 34  norm 0.353+/-0.000  strict 0.353  f1 0.353  q-level 0.353 [0.206, 0.500]
+own       older_2_7d      freshprompt n= 34  norm 0.353+/-0.000  strict 0.353  f1 0.353  q-level 0.353 [0.206, 0.529]
+freshqa   never-changing  baseline    n= 70  norm 0.690+/-0.016  strict 0.690  f1 0.710  q-level 0.700 [0.586, 0.800]
+freshqa   never-changing  rag         n= 70  norm 0.829+/-0.000  strict 0.814  f1 0.857  q-level 0.829 [0.743, 0.914]
+freshqa   never-changing  freshprompt n= 70  norm 0.829+/-0.000  strict 0.814  f1 0.843  q-level 0.829 [0.743, 0.914]
+freshqa   slow-changing   baseline    n= 70  norm 0.624+/-0.008  strict 0.610  f1 0.514  q-level 0.629 [0.514, 0.743]
+freshqa   slow-changing   rag         n= 70  norm 0.700+/-0.000  strict 0.657  f1 0.771  q-level 0.700 [0.586, 0.800]
+freshqa   slow-changing   freshprompt n= 70  norm 0.695+/-0.008  strict 0.652  f1 0.767  q-level 0.700 [0.586, 0.800]
+simpleqa  static          baseline    n=140  norm 0.248+/-0.011  strict 0.240  f1 0.290  q-level 0.243 [0.171, 0.314]
+simpleqa  static          rag         n=140  norm 0.750+/-0.000  strict 0.643  f1 0.879  q-level 0.750 [0.679, 0.821]
+simpleqa  static          freshprompt n=140  norm 0.779+/-0.000  strict 0.667  f1 0.886  q-level 0.786 [0.714, 0.850]
+
+STATISTICAL TESTS
+H1 primary rag: own recent_24h vs older_2_7d             3/34 vs   12/34  diff -26.5 pp  odds ratio 0.177         p=0.0087  p_holm=0.0087  (Fisher exact, one-sided (recent < older))
+secondary  freshprompt: own recent_24h vs older_2_7d     4/34 vs   12/34  diff -23.5 pp  odds ratio 0.244         p=0.0217  p_holm=0.1003  (Fisher exact, one-sided (recent < older))
+secondary  own: rag vs baseline                         15/68 vs    0/68  diff +22.1 pp  discordant 15 vs 0       p=0.0001  p_holm=0.0004  (McNemar exact, two-sided)
+secondary  own: freshprompt vs rag                      16/68 vs   15/68  diff +1.5 pp  discordant 1 vs 0        p=1.0000  p_holm=1.0000  (McNemar exact, two-sided)
+secondary  freshqa: rag vs baseline                   107/140 vs  93/140  diff +10.0 pp  discordant 23 vs 9       p=0.0201  p_holm=0.1003  (McNemar exact, two-sided)
+secondary  freshqa: freshprompt vs rag                107/140 vs 107/140  diff +0.0 pp  discordant 1 vs 1        p=1.0000  p_holm=1.0000  (McNemar exact, two-sided)
+secondary  simpleqa: rag vs baseline                  105/140 vs  34/140  diff +50.7 pp  discordant 80 vs 9       p=0.0000  p_holm=0.0000  (McNemar exact, two-sided)
+secondary  simpleqa: freshprompt vs rag               110/140 vs 105/140  diff +3.6 pp  discordant 5 vs 0        p=0.0625  p_holm=0.1875  (McNemar exact, two-sided)
+
+EFFICIENCY
+{'condition': 'baseline', 'answers': 1044, 'latency_median_ms': 882, 'latency_p25_ms': 675, 'latency_p75_ms': 1367, 'latency_p95_ms': 3794, 'avg_prompt_tokens': 71, 'avg_completion_tokens': 36.8, 'cost_per_1000_answers_usd': 0.0262}
+{'condition': 'rag', 'answers': 1044, 'latency_median_ms': 747, 'latency_p25_ms': 560, 'latency_p75_ms': 1126, 'latency_p95_ms': 3274, 'avg_prompt_tokens': 2076, 'avg_completion_tokens': 36.7, 'cost_per_1000_answers_usd': 0.2668}
+{'condition': 'freshprompt', 'answers': 1044, 'latency_median_ms': 735, 'latency_p25_ms': 560, 'latency_p75_ms': 1116, 'latency_p95_ms': 3317, 'avg_prompt_tokens': 2158, 'avg_completion_tokens': 37.6, 'cost_per_1000_answers_usd': 0.2769}
+{'condition': 'search (Tavily, once per question)', 'answers': 348, 'latency_median_ms': 3397, 'latency_p25_ms': 3042, 'latency_p75_ms': 3898, 'latency_p95_ms': 5347, 'avg_prompt_tokens': '', 'avg_completion_tokens': '', 'cost_per_1000_answers_usd': ''}
+
+RAG question-level errors: 121
+{'freshqa:generation_error': 20, 'freshqa:retrieval_miss': 13, 'own:retrieval_miss': 50, 'own:generation_error': 3, 'simpleqa:generation_error': 19, 'simpleqa:retrieval_miss': 16}

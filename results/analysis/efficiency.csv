@@ -1,0 +1,5 @@
+﻿condition,answers,latency_median_ms,latency_p25_ms,latency_p75_ms,latency_p95_ms,avg_prompt_tokens,avg_completion_tokens,cost_per_1000_answers_usd
+baseline,1044,882,675,1367,3794,71,36.8,0.0262
+rag,1044,747,560,1126,3274,2076,36.7,0.2668
+freshprompt,1044,735,560,1116,3317,2158,37.6,0.2769
+"search (Tavily, once per question)",348,3397,3042,3898,5347,,,

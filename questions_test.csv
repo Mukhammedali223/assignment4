@@ -1,0 +1,5 @@
+id,dataset,group,question,search_query,ground_truth,answer_type,t_event_utc,source_url,note
+R07,own,recent_24h,"As of 27 October 2026, what is the latest stable version of the Ruff Python package published on PyPI?",Ruff python package latest version,0.17.3,text,2026-10-27T00:33:29Z,https://pypi.org/project/ruff/0.17.3/,"upload time of the first file from PyPI JSON API, checked 2026-10-27"
+O06,own,older_2_7d,"As of 27 October 2026, what is the latest stable version of the coverage.py (coverage) Python package published on PyPI?",coverage.py (coverage) python package latest version,7.17.0,text,2026-10-22T16:03:55Z,https://pypi.org/project/coverage/7.17.0/,"upload time of the first file from PyPI JSON API, checked 2026-10-27"
+F178,freshqa,slow-changing,Who is the current Prime Minister of the United Kingdom?,,Keir Starmer | Sir Keir Rodney Starmer,text,,https://en.wikipedia.org/wiki/Prime_Minister_of_the_United_Kingdom#:~:text=Incumbent%0AKeir%20Starmer,"FreshQA 2026-04-21, TEST split"
+S0744,simpleqa,static,What is the maximum depth of the Mediterranean Sea in meters?,,5109 m,text,,,SimpleQA test set

@@ -1,0 +1,9 @@
+﻿check,subset,condition,original,adjusted
+outdated labels excluded,freshqa slow-changing,baseline,44/70 = 0.629,40/60 = 0.667
+outdated labels excluded,freshqa slow-changing,rag,49/70 = 0.700,49/60 = 0.817
+outdated labels excluded,freshqa slow-changing,freshprompt,49/70 = 0.700,48/60 = 0.800
+scorer false negatives counted as correct,own recent_24h,rag,3/34 = 0.088,3/34 = 0.088
+scorer false negatives counted as correct,own older_2_7d,rag,12/34 = 0.353,12/34 = 0.353
+scorer false negatives counted as correct,freshqa never-changing,rag,58/70 = 0.829,61/70 = 0.871
+scorer false negatives counted as correct,freshqa slow-changing,rag,49/70 = 0.700,54/70 = 0.771
+scorer false negatives counted as correct,simpleqa static,rag,105/140 = 0.750,126/140 = 0.900

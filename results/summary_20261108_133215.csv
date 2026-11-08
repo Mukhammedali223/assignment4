@@ -1,0 +1,16 @@
+﻿dataset,group,condition,n_answers,acc_strict,acc_norm,acc_f1
+freshqa,never-changing,baseline,210,0.69,0.69,0.71
+freshqa,never-changing,freshprompt,210,0.814,0.829,0.843
+freshqa,never-changing,rag,210,0.814,0.829,0.857
+freshqa,slow-changing,baseline,210,0.61,0.624,0.514
+freshqa,slow-changing,freshprompt,210,0.652,0.695,0.767
+freshqa,slow-changing,rag,210,0.657,0.7,0.771
+own,older_2_7d,baseline,102,0.0,0.0,0.0
+own,older_2_7d,freshprompt,102,0.353,0.353,0.353
+own,older_2_7d,rag,102,0.353,0.353,0.353
+own,recent_24h,baseline,102,0.0,0.0,0.0
+own,recent_24h,freshprompt,102,0.118,0.118,0.118
+own,recent_24h,rag,102,0.088,0.088,0.088
+simpleqa,static,baseline,420,0.24,0.248,0.29
+simpleqa,static,freshprompt,420,0.667,0.779,0.886
+simpleqa,static,rag,420,0.643,0.75,0.879

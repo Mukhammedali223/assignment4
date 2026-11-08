@@ -1,0 +1,10 @@
+﻿error_type,definition,count,percent_of_errors,example_id,example
+Stale evidence,"Retrieved pages show an older value (previous version, old fact) and the model reports it",32,26.4,F318,"truth No one as all books, films, and other works published in 1927 entered the public domain on 1 January 2023. / answer Conan Doyle Estate Ltd."
+Missing evidence (abstention),The answer is not in the retrieved text and the model answers NOT FOUND,26,21.5,F161,truth 2 | two / answer NOT FOUND
+Evidence ignored,The answer is in the retrieved text but the model answers NOT FOUND,2,1.7,F329,truth Suzanne Palmer / answer NOT FOUND
+Misreading of question or context,Evidence is usable but the model picks the wrong value or misreads the question,12,9.9,F544,truth 4.54 billion years | four and a half billion years | 4.5 billion years / answer 11.5 billion years old
+Unreliable source,"The wrong answer comes from a low-quality page (video, shop, social media)",3,2.5,F321,truth No official public payphones are left in New York City. The city removed its last public payphone in 2022. / answer 4
+Wrong entity,The answer belongs to a different package or object with a similar name,1,0.8,R29,truth 0.15.572 / answer 0.1.11
+Outdated reference label,The FreshQA label (April 2026) is no longer true; checked against the primary source,10,8.3,F156,truth 5 | five / answer four
+Disputed reference label,The reference answer is debatable; the model gives a defensible alternative,6,5.0,F140,truth University of Bologna / answer University of al-Qarawiyyin
+Scorer false negative,The answer is correct but written differently from every accepted alias,29,24.0,F124,truth Leonardo DiCaprio does not have any children. / answer 0

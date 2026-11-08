@@ -1,0 +1,6 @@
+﻿dataset,group,questions,errors,Stale evidence,Missing evidence (abstention),Evidence ignored,Misreading of question or context,Unreliable source,Wrong entity,Outdated reference label,Disputed reference label,Scorer false negative
+own,recent_24h,34,31,19,9,1,1,0,1,0,0,0
+own,older_2_7d,34,22,12,9,0,1,0,0,0,0,0
+freshqa,never-changing,70,12,1,1,1,1,1,0,0,4,3
+freshqa,slow-changing,70,21,0,2,0,3,0,0,10,1,5
+simpleqa,static,140,35,0,5,0,6,2,0,0,1,21

@@ -1,0 +1,9 @@
+﻿test,comparison,a,b,acc_a,acc_b,difference_pp,effect_size,statistic,p,role,p_holm
+"Fisher exact, one-sided (recent < older)",rag: own recent_24h vs older_2_7d,3/34,12/34,0.088,0.353,-26.5,odds ratio 0.177,,0.0087,H1 primary,0.0087
+"Fisher exact, one-sided (recent < older)",freshprompt: own recent_24h vs older_2_7d,4/34,12/34,0.118,0.353,-23.5,odds ratio 0.244,,0.0217,secondary,0.1003
+"McNemar exact, two-sided",own: rag vs baseline,15/68,0/68,0.221,0.0,22.1,discordant 15 vs 0,15,0.0001,secondary,0.0004
+"McNemar exact, two-sided",own: freshprompt vs rag,16/68,15/68,0.235,0.221,1.5,discordant 1 vs 0,1,1.0,secondary,1.0
+"McNemar exact, two-sided",freshqa: rag vs baseline,107/140,93/140,0.764,0.664,10.0,discordant 23 vs 9,23,0.0201,secondary,0.1003
+"McNemar exact, two-sided",freshqa: freshprompt vs rag,107/140,107/140,0.764,0.764,0.0,discordant 1 vs 1,1,1.0,secondary,1.0
+"McNemar exact, two-sided",simpleqa: rag vs baseline,105/140,34/140,0.75,0.243,50.7,discordant 80 vs 9,80,0.0,secondary,0.0
+"McNemar exact, two-sided",simpleqa: freshprompt vs rag,110/140,105/140,0.786,0.75,3.6,discordant 5 vs 0,5,0.0625,secondary,0.1875

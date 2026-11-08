@@ -1,0 +1,5 @@
+openai==2.18.0
+requests>=2.31
+packaging>=23.0
+scipy>=1.11
+matplotlib>=3.8
